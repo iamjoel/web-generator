@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>代码生成器</title>
+    <link rel="stylesheet" href="https://unpkg.com/grapesjs/dist/css/grapes.min.css">
+</head>
+
+<body>
+    <div id="gjs"></div>
+    <script src="https://unpkg.com/grapesjs"></script>
+    <!-- https://github.com/artf/grapesjs-blocks-basic -->
+    <script src="vendors/grapesjs-plugins/grapesjs-blocks-basic.min.js"></script>
+    <script type="text/javascript">
+    var editor = grapesjs.init({
+        container: '#gjs',
+        components: '<div class="txt-red">Hello world!</div>',
+        style: '.txt-red{color: red}',
+        plugins: ['gjs-blocks-basic'],
+        pluginsOpts: {
+          'gjs-blocks-basic': {
+            blocks: ['text', 'link', 'image']
+          }
+        }
+    });
+    </script>
+</body>
+
+</html>
