@@ -4,7 +4,7 @@ import 'moment/locale/zh-cn';
 import FastClick from 'fastclick';
 import './rollbar';
 import onError from './error';
-// import browserHistory from 'history/createBrowserHistory';
+import browserHistory from 'history/createBrowserHistory';
 import './index.less';
 // 1. Initialize
 const app = dva({

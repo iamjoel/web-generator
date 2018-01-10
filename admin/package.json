@@ -1,20 +1,14 @@
 {
-  "name": "ant-design-pro",
+  "name": "code-generator",
   "version": "0.3.1",
-  "description": "An out-of-box UI solution for enterprise applications",
+  "description": "code generator",
   "private": true,
   "scripts": {
-    "precommit": "npm run lint-staged",
-    "start": "roadhog dev",
+    "start": "DISABLE_ESLINT=true roadhog dev",
     "start:no-proxy": "cross-env NO_PROXY=true roadhog dev",
     "build": "roadhog build",
     "site": "roadhog-api-doc static && gh-pages -d dist",
     "analyze": "roadhog build --analyze",
-    "lint:style": "stylelint \"src/**/*.less\" --syntax less",
-    "lint": "eslint --ext .js src mock tests && npm run lint:style",
-    "lint:fix": "eslint --fix --ext .js src mock tests && npm run lint:style",
-    "lint-staged": "lint-staged",
-    "lint-staged:js": "eslint --ext .js",
     "test": "jest",
     "test:comps": "jest ./src/components",
     "test:all": "node ./tests/run-tests.js"
@@ -109,10 +103,6 @@
     "moduleNameMapper": {
       "\\.(css|less)$": "<rootDir>/tests/styleMock.js"
     }
-  },
-  "lint-staged": {
-    "**/*.{js,jsx}": "lint-staged:js",
-    "**/*.less": "stylelint --syntax less"
   },
   "browserslist": [
     "> 1%",
