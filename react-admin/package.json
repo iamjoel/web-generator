@@ -11,7 +11,9 @@
     "analyze": "roadhog build --analyze",
     "test": "jest",
     "test:comps": "jest ./src/components",
-    "test:all": "node ./tests/run-tests.js"
+    "test:all": "node ./tests/run-tests.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@antv/data-set": "^0.8.0",
@@ -36,7 +38,8 @@
     "react-container-query": "^0.9.1",
     "react-document-title": "^2.0.3",
     "react-dom": "^16.2.0",
-    "react-fittext": "^1.0.0"
+    "react-fittext": "^1.0.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.1.2",
@@ -108,5 +111,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 10"
-  ]
+  ],
+  "snyk": true
 }
